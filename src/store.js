@@ -10,7 +10,6 @@ import settingsReducer from 'settings/settingsSlice';
 import layoutReducer from 'layout/layoutSlice';
 import langReducer from 'lang/langSlice';
 import menuReducer from 'layout/nav/main-menu/menuSlice';
-import notificationReducer from 'layout/nav/notifications/notificationSlice';
 import scrollspyReducer from 'components/scrollspy/scrollspySlice';
 
 // import persist key
@@ -29,7 +28,6 @@ const persistedReducer = persistReducer(
     layout: layoutReducer,
     lang: langReducer,
     menu: menuReducer,
-    notification: notificationReducer,
     scrollspy: scrollspyReducer,
   })
 );

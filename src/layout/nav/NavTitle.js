@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { DEFAULT_PATHS } from 'config.js';
+import {DataContext} from "../../data/DataProvider";
 
-const NavLogo = () => {
+const NavTitle = () => {
+    const data = useContext(DataContext)
   return (
     <div className="logo position-relative">
       <Link to={DEFAULT_PATHS.APP}>
@@ -13,14 +15,14 @@ const NavLogo = () => {
          */}
         {/*<div className="img" />*/}
           <div className="text-white" style={{fontWeight:"bolder", fontFamily:"Tahoma", fontSize: "20px"}}>
-              Mohammad Immam
+              {data.profile?.name}
           </div>
-          <hr/>
+      {/*    <hr/>
           <div className="text-white text-semi-large">Software Solutions Architect</div>
           <div className="text-white text-semi-large">&</div>
-          <div className="text-white text-medium">Full-Stack Software Engineer</div>
+          <div className="text-white text-medium">Full-Stack Software Engineer</div>*/}
       </Link>
     </div>
   );
 };
-export default React.memo(NavLogo);
+export default React.memo(NavTitle);

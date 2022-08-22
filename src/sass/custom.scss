@@ -1,7 +1,49 @@
-.logo{
-    min-width: 75% !important;
-    a{
-        min-width: 100% !important;
 
+.card-image-right{
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  height: 100% !important;
+}
+
+
+//old stuff
+.logo {
+  min-width: 75% !important;
+
+  a {
+    min-width: 100% !important;
+
+  }
+}
+
+
+.mobile-links {
+  position: absolute;
+  height: fit-content;
+  //transform:translate(0);
+  top: -100px;
+  left: 0;
+  border-radius: 0 0 20px 20px;
+  background-color: var(--background-navcolor-dark);
+  color: black;
+  z-index: 0;
+  transition: all 0.4s ease;
+  //display: none;
+
+  &.show {
+    //display: block;
+    transform: translate(0, 150px);
+    transition: all 0.4s ease;
+  }
+
+  &-item {
+    color: var(--background-navcolor-light);
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    margin: 10px;
+
+    &:hover {
+      background: #0a58ca;
     }
+  }
 }

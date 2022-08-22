@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { menuChangeMenuPadding } from 'layout/nav/main-menu/menuSlice';
+
 import { useMutationObservable } from './useMutationObservable';
 
 const useModalPaddingFix = () => {

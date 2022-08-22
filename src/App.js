@@ -1,15 +1,34 @@
-import React, { useMemo } from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 // import layout
 import Layout from 'layout/Layout';
 
-import Vertical from "./views/Vertical";
+import Main from "./views/Main";
+import {Col, Container, Row} from "react-bootstrap";
+import Nav from "./layout/nav/Nav";
+import Footer from "./layout/footer/Footer";
+import useLayout from "./hooks/useLayout";
 
 const App = () => {
-  return (
-      <Layout>
-        <Vertical/>
-      </Layout>
-  )};
+
+    useLayout();
+    return (
+<>
+    {/*<main>*/}
+        <Container className="p-4 w-lg-75" style={{minHeight: "120%"}}>
+            <Row className="h-100 m-0">
+                {/*<SidebarMenu />*/}
+                <Col className="h-100" id="contentArea">
+                    <Main/>
+                </Col>
+            </Row>
+
+        </Container>
+
+    {/*</main>*/}
+    <Footer/>
+</>
+)
+};
 
 export default App;
