@@ -20,8 +20,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 import App from "./App";
 import {DataProvider} from "./data/DataProvider";
 
-
 const Main = () => {
+
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistedStore}>

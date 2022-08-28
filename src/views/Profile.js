@@ -2,38 +2,69 @@ import React, {useContext} from "react";
 import {Card, Col, Row} from "react-bootstrap";
 import {DataContext} from "../data/DataProvider";
 
-export const Profile = ()=>{
+export const Profile = () => {
     const data = useContext(DataContext);
     return (
         <Col xs="12" className="m-auto">
-            <Card className="">
-                <Row className="g-0 h-auto sh-md-25">
-                    <Col sm="4" className="h-100">
-                        <Card.Img src={data.profile?.picture} className="card-img-horizontal-sm" alt="card image" />
+            {/*<Card >*/}
+                <Row className="g-0">
+                    <Col xs="5" md={4} className="text-center p-2 h-100">
+                        {/*<img src={data.profile?.picture} className="rounded profile-image" alt="card image"/>*/}
+                        <img className="rounded-circle z-depth-2 max-w-100 sw-md-15" alt="100x100"
+                             src={data.profile?.picture}
+                             data-holder-rendered="true"/>
                     </Col>
-                    <Col sm="8">
-                        <Card.Body className="d-flex flex-column h-100">
-                            <Card.Title>
-                                <div style={{fontWeight:"bolder", fontFamily:"Tahoma", fontSize: "20px"}}>
-                                    {data.profile?.name}
-                                </div>
-                            </Card.Title>
-                            <Card.Text className="mb-1 d-flex">
-                            </Card.Text>
-                            <Card.Text className="text-medium border-bottom">Software Solutions Architect & Software Engineer</Card.Text>
-                            {/*<Card.Title className="d-flex ">{data.profile?.name}</Card.Title>*/}
-                            <Card.Text className="mb-1 d-flex">
-                                Icing liquorice oat cake caramels. Sugar plum gummi bears jujubes tootsie roll chocolate bar. Jujubes candy jelly-o topping.
-                            </Card.Text>
-                            <Card.Text className="mt-auto d-flex">
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Text>
-                        </Card.Body>
-                    </Col>
+                    <Col xs={7} md={8} className="p-2 pb-0">
+                        <Card.Title>
+                            <h3 className={"main-title fw-bolder text-dark"} style={{fontSize:"1.15 rem"}}>
+                                {data.profile?.name}
+                            </h3>
+                            <div className="border-bottom" style={{fontSize:"0.75rem"}}>{data.profile?.title}</div>
+                        </Card.Title>
+                        <Card.Text className="m-0 d-flex">
+                            {data.profile?.links?.map((item)=>
+                                <a href={item.link} target="_blank">
+                                    <i className={"me-3 text-dark icon-20 "+item.bootstrap_icon} />
+                                </a>
+                            )}
+                        </Card.Text>
+                        <div className="g-0 d-none d-md-inline">
 
+
+                            <Card.Text class="m-0">
+                                {data.profile.emails?.map((item)=>
+                                    <a href={"mailto:"+item}>{item+" | "}</a>
+                                )}
+
+                            </Card.Text>
+
+
+                            <Card.Text className="mb-1 d-flex text-muted">
+                                {data.profile?.description}
+                            </Card.Text>
+                        </div>
+                    </Col>
+                    <Col xs={12} className="d-md-none p-2">
+
+                        {/*<Card.Title className="d-flex ">{data.profile?.name}</Card.Title>*/}
+
+
+                        <Card.Text class="">
+                            {data.profile.emails?.map((item)=>
+                                <a href={"mailto:"+item}>{item+" | "}</a>
+                            )}
+
+                        </Card.Text>
+
+
+                        <Card.Text className="mb-1 d-flex">
+                            Icing liquorice oat cake caramels. Sugar plum gummi bears jujubes tootsie roll chocolate
+                            bar. Jujubes candy jelly-o topping.
+                        </Card.Text>
+                    </Col>
 
                 </Row>
-            </Card>
+            {/*</Card>*/}
         </Col>
     )
 }

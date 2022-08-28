@@ -24,3 +24,4 @@ yarn-error.log*
 
 .idea
 /.env
+/ext_azure-func/GitAccessToken/index.js

@@ -15,7 +15,7 @@ const App = () => {
     return (
 <>
     {/*<main>*/}
-        <Container className="p-4 w-lg-75" style={{minHeight: "120%"}}>
+        <Container className="pt-4 m-0 m-md-auto w-md-75" style={{minHeight: "120%"}}>
             <Row className="h-100 m-0">
                 {/*<SidebarMenu />*/}
                 <Col className="h-100" id="contentArea">
@@ -26,7 +26,7 @@ const App = () => {
         </Container>
 
     {/*</main>*/}
-    <Footer/>
+    {/*<Footer/>*/}
 </>
 )
 };

@@ -18,7 +18,7 @@ $font-heading: 'Montserrat', sans-serif;
   --footer-size: 4.5rem;
   --input-height: 2.25rem;
   --small-title-height: 2rem;
-  --font: 'Nunito Sans', sans-serif;
+  //--font: 'Nunito Sans', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
 }
 
@@ -29,7 +29,7 @@ html[data-radius='rounded'] {
   --border-radius-xl: 50px;
 }
 
-html[data-radius='standard'] {
+html[data-radius='stanard'] {
   --border-radius-lg: 6px;
   --border-radius-md: 4px;
   --border-radius-sm: 3px;

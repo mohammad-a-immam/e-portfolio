@@ -1,22 +1,24 @@
-const sections = [
+export const sections = [
     {
         name: "Home",
-        description:"Fill in"
+        key:"home",
+    },
+    {
+        name: "Education",
+        key:"education"
     },
     {
         name: "Expertise",
-        description:"Fill in"
+        key:"expertise"
     },
     {
-        name: "Experience",
-        description:"Fill in"
+        name: "Experience/Work",
+        key:"experience"
+
     },
+
     {
-        name: "Projects",
-        description:"Fill in"
-    },
-    {
-        name: "Future Project Plans",
-        description:"Fill in"
+        name: "Guest Wall",
+        key:"guestwall"
     }
 ]

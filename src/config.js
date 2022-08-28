@@ -29,7 +29,7 @@ export const DEFAULT_SETTINGS = {
   LAYOUT: LAYOUT.Boxed,
   RADIUS: RADIUS.Rounded,
   COLOR: THEME_COLOR.LightBlue,
-  NAV_COLOR: NAV_COLOR.Dark,
+  NAV_COLOR: NAV_COLOR.Light,
   USE_SIDEBAR: false,
 };
 

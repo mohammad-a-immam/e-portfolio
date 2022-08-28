@@ -3,15 +3,22 @@ import {Row, Col, Card, Nav, Tab, Dropdown} from 'react-bootstrap';
 import HtmlHead from 'components/html-head/HtmlHead';
 import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
 import {MENU_PLACEMENT, LAYOUT} from 'constants.js';
-import {useLocation} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import {Profile} from "./Profile";
 import classNames from "classnames";
 import {useWindowSize} from "../hooks/useWindowSize";
+import {sections} from '../data/sections'
 import CsLineIcons from "../cs-line-icons/CsLineIcons";
+import {Education} from "./sections/Education";
+import {Experience} from "./sections/Experience";
+import {Home} from "./sections/Home";
+import {Guestwall} from "./sections/Guestwall";
+import * as querystring from "querystring";
+import {Expertise} from "./sections/Expertise";
 
 
 export const SectionNav = () => {
-    const MoreItemToggle = React.forwardRef(({ onClick, parentClassname }, ref) => (
+    const MoreItemToggle = React.forwardRef(({onClick, parentClassname}, ref) => (
         <a
             ref={ref}
             className={classNames('btn btn-icon btn-icon-only', {
@@ -24,16 +31,16 @@ export const SectionNav = () => {
                 onClick(e);
             }}
         >
-            <CsLineIcons icon="more-horizontal" size="20" />
+            <CsLineIcons icon="more-horizontal" size="20"/>
         </a>
     ));
 
     MoreItemToggle.displayName = 'MoreItemToggle';
-    const ResponsiveNav = React.forwardRef(({ className, children }, ref) => {
+    const ResponsiveNav = React.forwardRef(({className, children}, ref) => {
         const innerRef = React.createRef();
         const [collapseIndex, setCollapseIndex] = useState(children.length);
         const [childSteps, setChildSteps] = useState([]);
-        const { width } = useWindowSize();
+        const {width} = useWindowSize();
 
         const setSteps = () => {
             const steps = [];
@@ -72,7 +79,7 @@ export const SectionNav = () => {
                 {children.slice(0, collapseIndex)}
                 {collapseIndex !== children.length && (
                     <Dropdown className={classNames('nav-item ms-auto pe-0')} alignRight>
-                        <Dropdown.Toggle as={MoreItemToggle} parentClassname={className} />
+                        <Dropdown.Toggle as={MoreItemToggle} parentClassname={className}/>
                         <Dropdown.Menu>{children.slice(collapseIndex, children.length)}</Dropdown.Menu>
                     </Dropdown>
                 )}
@@ -80,100 +87,32 @@ export const SectionNav = () => {
         );
     });
 
+    const location = useLocation();
+    const code = location?.search? querystring.parse(location.search.replace('?',''))?.code : null;
+
     return (
-        <Card body className="mb-3">
-            <Tab.Container defaultActiveKey="First">
-                <Card.Header className="border-0 pb-0">
-                    <Nav className="nav-tabs-line" variant="tabs" activeKey="First" as={ResponsiveNav}>
-                        <Nav.Item>
-                            <Nav.Link eventKey="First">First</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Second">Second</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Third">Third</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Fourth" disabled>
-                                Disabled
-                            </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Fifth">Fifth</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Sixth">Sixth</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Seventh">Seventh</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Eighth">Eighth</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Ninth">Ninth</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="Tenth">Tenth</Nav.Link>
-                        </Nav.Item>
+        // <Card body className="mb-3">
+            <Tab.Container defaultActiveKey={code?"guestwall":"home"}>
+                {/*<Card.Header className="border-0 pb-0">*/}
+                    <Nav className="nav-tabs-line" variant="tabs" activeKey={code?"guestwall":"home"} as={ResponsiveNav}>
+                        {sections.map((item) =>
+                            <Nav.Item>
+                                <Nav.Link eventKey={item.key} className="text-decoration-underline text-quaternary">{item.name}</Nav.Link>
+                            </Nav.Item>
+                        )}
+
                     </Nav>
-                </Card.Header>
+                {/*</Card.Header>*/}
                 <Card.Body>
                     <Tab.Content>
-                        <Tab.Pane eventKey="First">
-                            <Card.Title>First Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Second">
-                            <Card.Title>Second Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Third">
-                            <Card.Title>Third Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Fourth">
-                            <Card.Title>Fourth Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Fifth">
-                            <Card.Title>Fifth Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Sixth">
-                            <Card.Title>Sixth Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Seventh">
-                            <Card.Title>Seventh Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Eighth">
-                            <Card.Title>Eighth Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Ninth">
-                            <Card.Title>Ninth Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="Tenth">
-                            <Card.Title>Tenth Title</Card.Title>
-                            <Card.Text>With supporting text below as a natural lead-in to additional
-                                content.</Card.Text>
-                        </Tab.Pane>
+                        <Home/>
+                        <Education/>
+                        <Experience/>
+                        <Expertise/>
+                        <Guestwall/>
                     </Tab.Content>
                 </Card.Body>
             </Tab.Container>
-        </Card>
+        // </Card>
     )
 }

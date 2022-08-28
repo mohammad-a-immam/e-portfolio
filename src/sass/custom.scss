@@ -1,49 +1,51 @@
 
+
+body{
+  font-family: IBM Plex Sans Regular;
+  color: var(--dark);
+}
 .card-image-right{
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
   height: 100% !important;
 }
 
-
-//old stuff
-.logo {
-  min-width: 75% !important;
-
-  a {
-    min-width: 100% !important;
-
-  }
+.profile-image{
 }
 
+.text-align-right{
+  text-align: right;
+}
 
-.mobile-links {
-  position: absolute;
-  height: fit-content;
-  //transform:translate(0);
-  top: -100px;
-  left: 0;
-  border-radius: 0 0 20px 20px;
-  background-color: var(--background-navcolor-dark);
-  color: black;
-  z-index: 0;
-  transition: all 0.4s ease;
-  //display: none;
+.text-align-center{
+  text-align: center;
+}
 
-  &.show {
-    //display: block;
-    transform: translate(0, 150px);
-    transition: all 0.4s ease;
-  }
+.hover-opacity-full:hover{
+  opacity: 100% !important;
+}
 
-  &-item {
-    color: var(--background-navcolor-light);
-    padding: 10px;
-    border-bottom: 1px solid grey;
-    margin: 10px;
+.main-title{
+  font-size: 1.875rem;
+  font-weight: 700!important;
+}
 
-    &:hover {
-      background: #0a58ca;
-    }
-  }
+.pre-line{
+  white-space: pre-line;
+}
+
+.border-right{
+  border-right: 1px solid grey;
+}
+
+.fs-1{
+  font-size: small !important;
+}
+
+.fs-0{
+  font-size: x-small !important;
+}
+
+.fs-2{
+  font-size: medium !important;
 }
