@@ -3,7 +3,7 @@
     "name": "Mohammad A Immam",
     "picture": "https://avatars.githubusercontent.com/u/44204526?s=400&u=05d8223f01ae89239f8c4073f11fdab894c3e569&v=4",
     "title": "Software Solutions Architect & Software Engineer",
-    "description": "Icing liquorice oat cake caramels. Sugar plum gummi bears jujubes tootsie roll chocolate bar. Jujubes candy jelly-o topping.",
+    "description": "Icing liquorice oat cake caramels. Sugar plum gummi bears jujubes tootsie roll.",
     "emails": [
       "m.immam@ufl.edu",
       "immammohammad1@gmail.com"
@@ -51,9 +51,9 @@
   ],
   "education": [
     {
-      "institution": "University of Florida",
-      "description": "",
-      "title": "Bachelor of Science",
+      "institution": "Introduction to React 2025",
+      "description": "<b>Moon Tempor</b>\n\nAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.",
+      "title": "e",
       "title_details": "Computer and Information Science | Herbert Werthiem College of Engineering",
       "location": "Gainesville, FL",
       "from": "10-01-2020",
@@ -66,7 +66,17 @@
         "side_projects"
       ],
       "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/University_of_Florida_seal.svg/1200px-University_of_Florida_seal.svg.png",
-      "color": "secondary"
+      "color": "quaternary",
+      "attachments": [
+        {
+          "name": "Diploma",
+          "link": "https://www.facebook.com"
+        },
+        {
+          "name": "Diploma 2",
+          "link": "https://www.facebook.com"
+        }
+      ]
     },
     {
       "institution": "Introduction to React 2025",

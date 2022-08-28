@@ -41,26 +41,26 @@ const useLayout = () => {
     };
     // eslint-disable-next-line
   }, []);
+  /*
+    useEffect(() => {
+      htmlTag.setAttribute('data-placement', placementHtmlData);
+      htmlTag.setAttribute('data-dimension', dimensionHtmlData);
+      // htmlTag.setAttribute('data-behaviour', behaviourHtmlData);
+      htmlTag.setAttribute('data-navcolor', navColor);
+      htmlTag.setAttribute('data-radius', radius);
+      htmlTag.setAttribute('data-color', color);
+      htmlTag.setAttribute('data-layout', layout);
+    }, [htmlTag, placementHtmlData, dimensionHtmlData, behaviourHtmlData, navColor, radius, color, layout]);
 
-  useEffect(() => {
-    htmlTag.setAttribute('data-placement', placementHtmlData);
-    htmlTag.setAttribute('data-dimension', dimensionHtmlData);
-    // htmlTag.setAttribute('data-behaviour', behaviourHtmlData);
-    htmlTag.setAttribute('data-navcolor', navColor);
-    htmlTag.setAttribute('data-radius', radius);
-    htmlTag.setAttribute('data-color', color);
-    htmlTag.setAttribute('data-layout', layout);
-  }, [htmlTag, placementHtmlData, dimensionHtmlData, behaviourHtmlData, navColor, radius, color, layout]);
+    useEffect(() => {
+      if (attrMenuAnimate) htmlTag.setAttribute('data-menu-animate', attrMenuAnimate);
+      else htmlTag.removeAttribute('data-menu-animate');
+    }, [htmlTag, attrMenuAnimate]);
 
-  useEffect(() => {
-    if (attrMenuAnimate) htmlTag.setAttribute('data-menu-animate', attrMenuAnimate);
-    else htmlTag.removeAttribute('data-menu-animate');
-  }, [htmlTag, attrMenuAnimate]);
-
-  useEffect(() => {
-    if (attrMobile) htmlTag.setAttribute('data-mobile', attrMobile);
-    else htmlTag.removeAttribute('data-mobile');
-  }, [htmlTag, attrMobile]);
+    useEffect(() => {
+      if (attrMobile) htmlTag.setAttribute('data-mobile', attrMobile);
+      else htmlTag.removeAttribute('data-mobile');
+    }, [htmlTag, attrMobile]);*/
 
   return true;
 };

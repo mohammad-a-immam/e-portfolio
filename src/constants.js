@@ -1,3 +1,8 @@
+export const STYLEPREFIX_0 = "primary";
+export const STYLEPREFIX_1 = "secondary";
+export const STYLEPREFIX_2 = "tertiary";
+export const STYLEPREFIX_3 = "quaternary";
+
 export const DIMENSION = {
   Desktop: 'desktop',
   Tablet: 'tablet',
@@ -26,6 +31,7 @@ export const THEME_COLOR = {
   DarkPurple: 'dark-purple',
   LightPink: 'light-pink',
   DarkPink: 'dark-pink',
+  CustomBlue: 'custom-blue',
 };
 
 export const NAV_COLOR = {

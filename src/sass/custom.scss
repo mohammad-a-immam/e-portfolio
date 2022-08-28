@@ -25,6 +25,10 @@ body{
   opacity: 100% !important;
 }
 
+.text-quaternary[aria-selected="true"]{
+  color: var(--primary) !important;
+}
+
 .main-title{
   font-size: 1.875rem;
   font-weight: 700!important;

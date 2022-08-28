@@ -55,8 +55,8 @@ export const Expertise = () => {
                 {/*Languages*/}
                 <div className="title-2 mb-1">Major Skillsets</div>
                 <Row>
-                    <Col xs={4} md={2} className="hover-scale-up">
-                        <div className="w-100">
+                    <Col xs={4} md={2} className="">
+                        <div className="">
                             <img className="m-auto mt-1 w-100"
                                  src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
                             <div class={"m-auto text-align-center"}>
@@ -66,37 +66,39 @@ export const Expertise = () => {
                     </Col>
                 </Row>
                 <hr/>
-                {/*APIs*/}
-                <div className="title-2 mb-1">Cloud Technologies</div>
-                <Row>
-                    <Col xs={3} md={2} className="">
-                        <OverlayTrigger placement="top"
-                                        overlay={<Tooltip id="tooltip-top" className="opacity-100">Tooltip on
-                                            top.</Tooltip>}>
-                            <div className="">
-                                <img className="m-auto mt-1 w-100"
-                                     src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
-                                <div className={"m-auto text-align-center"}>
-                                    <span className="text-muted">C#</span>
-                                </div>
-                            </div>
-                        </OverlayTrigger>
-
-                    </Col>
-                </Row>
-                <hr/>
                 {/*Database Management*/}
                 <div className="title-2 mb-1">Database Management</div>
                 <Row>
                     <Col xs={3} md={2} className="">
-                            <div className="">
-                                <img className="m-auto mt-1 w-100"
-                                     src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
-                                <div className={"m-auto text-align-center"}>
-                                    <span className="text-muted">C#</span>
-                                </div>
+                        <div className="">
+                            <img className="m-auto mt-1 w-100"
+                                 src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
+                            <div className={"m-auto text-align-center"}>
+                                <span className="text-muted">C#</span>
                             </div>
+                        </div>
 
+                    </Col>
+                </Row>
+                <hr/>
+
+                {/*APIs*/}
+                <div className="title-2 mb-1">Cloud Technologies</div>
+                <Row>
+                    <Col xs={3} md={2} className="">
+                        <Card className="opacity-75 hover-opacity-full">
+                            <OverlayTrigger placement="top"
+                                            overlay={<Tooltip id="tooltip-top" className="opacity-100">Tooltip on
+                                                top.</Tooltip>}>
+                                <div className="">
+                                    <img className="m-auto mt-1 w-100"
+                                         src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
+                                    <div className={"m-auto text-align-center"}>
+                                        <span className="text-muted">C#</span>
+                                    </div>
+                                </div>
+                            </OverlayTrigger>
+                        </Card>
                     </Col>
                 </Row>
 
@@ -105,17 +107,14 @@ export const Expertise = () => {
                 <div className="title-2 mb-1">APIs and SDKs</div>
                 <Row className="g-1">
                     <Col xs={3} md={1} className="">
-                        <OverlayTrigger placement="top"
-                                        overlay={<Tooltip id="tooltip-top" className="opacity-100">Tooltip on
-                                            top.</Tooltip>}>
-                            <Card className="shadow opacity-75 hover-opacity-full cursor-default">
+
+                            <Card className="bg-transparent shadow opacity-75 hover-opacity-full cursor-default">
                                 <img className="m-auto mt-1 w-100"
                                      src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
                                 <Card.Body class={"m-auto text-align-center"}>
                                     <span className="text-muted">C#</span>
                                 </Card.Body>
                             </Card>
-                        </OverlayTrigger>
 
                     </Col>
                 </Row>
@@ -124,17 +123,13 @@ export const Expertise = () => {
                 <div className="title-2 mb-1">Major Frameworks</div>
                 <Row className="g-1">
                     <Col xs={3} md={1} className="">
-                        <OverlayTrigger placement="top"
-                                        overlay={<Tooltip id="tooltip-top" className="opacity-100">Tooltip on
-                                            top.</Tooltip>}>
-                            <Card className="shadow opacity-75 hover-opacity-full cursor-default">
+                            <Card className="bg-transparent shadow opacity-75 hover-opacity-full cursor-default">
                                 <img className="m-auto mt-1 w-100"
                                      src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
                                 <Card.Body class={"m-auto text-align-center"}>
                                     <span className="text-muted">C#</span>
                                 </Card.Body>
                             </Card>
-                        </OverlayTrigger>
 
                     </Col>
                 </Row>
@@ -144,17 +139,13 @@ export const Expertise = () => {
                 <div className="title-2 mb-1">Other Technologies</div>
                 <Row className="g-1">
                     <Col xs={3} md={1} className="">
-                        <OverlayTrigger placement="top"
-                                        overlay={<Tooltip id="tooltip-top" className="opacity-100">Tooltip on
-                                            top.</Tooltip>}>
-                            <Card className="shadow opacity-75 hover-opacity-full cursor-default">
+                            <Card className="bg-transparent shadow opacity-75 hover-opacity-full cursor-default">
                                 <img className="m-auto mt-1 w-100"
                                      src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
                                 <Card.Body class={"m-auto text-align-center"}>
                                     <span className="text-muted">C#</span>
                                 </Card.Body>
                             </Card>
-                        </OverlayTrigger>
 
                     </Col>
                 </Row>
