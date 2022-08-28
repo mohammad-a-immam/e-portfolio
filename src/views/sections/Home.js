@@ -1,6 +1,8 @@
 import React, {useContext} from 'react'
-import {Accordion, Badge, Button, Card, Col, Row, Tab} from "react-bootstrap";
+import {Accordion, Badge, Button, Card, Col, NavLink, Row, Tab} from "react-bootstrap";
 import {DataContext} from "../../data/DataProvider";
+import Clamp from "../../components/clamp";
+import CsLineIcons from "../../cs-line-icons/CsLineIcons";
 
 export const Home = () => {
     const data = useContext(DataContext);
@@ -50,7 +52,27 @@ export const Home = () => {
                   </Col>
               </Row>
               <div>Featured Articles/Posts/Blogs</div>
-              <Row>
+              <Row className="g-2">
+                  <Col xs="4" className="mb-2">
+                      {/* List Start */}
+                      <Card className="border-primary hover-border-primary hover-scale-up">
+                          <NavLink to="/pages/blog/detail">
+                              <img src="/img/product/large/product-1.webp" className="card-img-top sh-20" alt="card image" />
+                          </NavLink>
+                          <Card.Body>
+                              <h4 className="m-">
+                                  <div className={"fs-1"}>
+                                      Basic Introduction to Bread Making
+                                  </div>
+                              </h4>
+                              <Clamp clamp="2" className="text-alternate mb-0">
+                                  Jujubes brownie marshmallow apple pie donut ice cream jelly-o jelly-o gummi bears. Tootsie roll chocolate bar dragée bonbon cheesecake icing.
+                                  Danish wafer donut cookie caramels gummies topping.
+                              </Clamp>
+                          </Card.Body>
+                      </Card>
+                      {/* List End */}
+                  </Col>
 
               </Row>
           </section>

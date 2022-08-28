@@ -40,8 +40,8 @@ export const Experience = () => {
                                                 Clicking
                                                 here will take you to the page
                                             </div>
-                                            <Badge className="m-1" bg={"tertiary"}>Gubs</Badge>
-                                            <Badge className="m-1" bg="secondary">.NET Core</Badge>
+                                            <Badge className="m-1" bg={"primary"}>Gubs</Badge>
+                                            <Badge className="m-1" bg="primary">.NET Core</Badge>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -61,8 +61,8 @@ export const Experience = () => {
                                                 Clicking
                                                 here will take you to the page
                                             </div>
-                                            <Badge bg={"tertiary"}>Gubs</Badge>
-                                            <Badge bg="secondary">.NET Core</Badge>
+                                            <Badge className="m-1" bg={"primary"}>Gubs</Badge>
+                                            <Badge className="m-1" bg="primary">.NET Core</Badge>
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -121,9 +121,9 @@ export const Experience = () => {
                         </Row>
                         <hr/>
                         <Row className="    ">
-                            <div>Featured Snippets</div>
-                            <a href={""} className="text-white">
-                                <Card className="bg-dark mb-2 hover-border-primary hover-scale-up">
+                            <div>Snippets</div>
+                            <a href={""} className="text-dark">
+                                <Card className="mb-2 border-primary hover-border-primary hover-scale-up">
 
                                     <Row className="g-0 sh-9 p-card pt-0 pb-0">
                                         <Col xs="4" className="d-flex align-items-center justify-content-center">

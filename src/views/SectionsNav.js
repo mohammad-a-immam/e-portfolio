@@ -88,13 +88,14 @@ export const SectionNav = () => {
     });
 
     const location = useLocation();
+    const sectionId = useParams()?.id;
     const code = location?.search? querystring.parse(location.search.replace('?',''))?.code : null;
 
     return (
         // <Card body className="mb-3">
-            <Tab.Container defaultActiveKey={code?"guestwall":"home"}>
+            <Tab.Container defaultActiveKey={sectionId??"home"}>
                 {/*<Card.Header className="border-0 pb-0">*/}
-                    <Nav className="nav-tabs-line" variant="tabs" activeKey={code?"guestwall":"home"} as={ResponsiveNav}>
+                    <Nav className="nav-tabs-line" variant="tabs" activeKey={sectionId??"home"} as={ResponsiveNav}>
                         {sections.map((item) =>
                             <Nav.Item>
                                 <Nav.Link eventKey={item.key} className="text-decoration-underline text-quaternary">{item.name}</Nav.Link>

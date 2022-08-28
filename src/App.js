@@ -8,27 +8,38 @@ import {Col, Container, Row} from "react-bootstrap";
 import Nav from "./layout/nav/Nav";
 import Footer from "./layout/footer/Footer";
 import useLayout from "./hooks/useLayout";
+import Switch from "react-router-dom/es/Switch";
+import Route from "react-router-dom/es/Route";
+import {Project} from "./views/Project";
 
 const App = () => {
 
     useLayout();
     return (
-<>
-    {/*<main>*/}
-        <Container className="pt-4 m-0 m-md-auto w-md-75" style={{minHeight: "120%"}}>
-            <Row className="h-100 m-0">
-                {/*<SidebarMenu />*/}
-                <Col className="h-100" id="contentArea">
-                    <Main/>
-                </Col>
-            </Row>
+        <>
+            {/*<main>*/}
+            <Container className="pt-2 m-0 m-md-auto w-md-75" >
+                <Row className="h-100 m-0 pb-5">
+                    {/*<SidebarMenu />*/}
+                    <Col className="h-100" id="contentArea">
+                        <Switch>
+                            <Route path="/projects/:id">
+                                <Project/>
+                            </Route>
+                            <Route path="/:id?">
+                                <Main/>
+                            </Route>
+                        </Switch>
+                    </Col>
+                </Row>
+            </Container>
 
-        </Container>
-
-    {/*</main>*/}
-    {/*<Footer/>*/}
-</>
-)
+            {/*</main>*/
+            }
+            {/*<Footer/>*/
+            }
+        </>
+    )
 };
 
 export default App;

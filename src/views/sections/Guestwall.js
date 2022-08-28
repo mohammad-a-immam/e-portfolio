@@ -107,8 +107,8 @@ export const Guestwall = () => {
                     </Col>
                     <Col md={6} className="">
                         <div className={"fw-bold"}>Visitors' Reviews</div>
-                        <div style={{fontSize: "x-small"}} className="text-muted mb-3">Leave a portion of you with
-                            me...
+                        <div style={{fontSize: "x-small"}} className="text-muted mb-3">Sign into GitHub above and
+                            leave a portion of you with me...
                         </div>
 
                         {data.comments?.filter(x => !x.featured).map(item =>

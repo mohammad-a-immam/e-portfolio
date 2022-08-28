@@ -38,7 +38,7 @@ export const Expertise = () => {
                 <div className="title-2 mb-1">Certifications</div>
                 <Row>
                     <Col xs={6} md={3} className=" hover-scale-up">
-                        <Card className="shadow hover-border-primary">
+                        <Card className="shadow border-primary hover-border-primary">
                             <img width={100} className="m-auto mt-1"
                                  src={"https://personalstorage01a.blob.core.windows.net/mportfolio-files/images/certifications/aws-certified-solutions-architect-associate.png"}/>
                             <Card.Body class={"m-auto text-align-center"}>
@@ -56,7 +56,7 @@ export const Expertise = () => {
                 <div className="title-2 mb-1">Major Skillsets</div>
                 <Row>
                     <Col xs={4} md={2} className="">
-                        <div className="">
+                        <div className="hover-scale-down">
                             <img className="m-auto mt-1 w-100"
                                  src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
                             <div class={"m-auto text-align-center"}>
@@ -70,7 +70,7 @@ export const Expertise = () => {
                 <div className="title-2 mb-1">Database Management</div>
                 <Row>
                     <Col xs={3} md={2} className="">
-                        <div className="">
+                        <div className="hover-scale-down">
                             <img className="m-auto mt-1 w-100"
                                  src={"https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"}/>
                             <div className={"m-auto text-align-center"}>

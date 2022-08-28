@@ -1,5 +1,3 @@
-
-
 body{
   font-family: IBM Plex Sans Regular;
   color: var(--dark);
@@ -8,6 +6,10 @@ body{
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
   height: 100% !important;
+}
+
+.m-half{
+  margin: 0.5px!important
 }
 
 .profile-image{

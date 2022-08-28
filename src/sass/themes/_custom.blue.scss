@@ -7,17 +7,16 @@
 */
 
 html[data-color='custom-blue'] {
-  --primary: #ea3c53;
-  --secondary: blue;
+  --primary: #ff7043;
+  --secondary: #6cc8ef;
   --tertiary: #5de3c8;
-  --quaternary: black;
-  --primary-rgb: 74,72, 42;
+  --quaternary: darkblue;
+  --primary-rgb: 0,94,184;
   --secondary-rgb: 108, 219, 239;
   --tertiary-rgb: 93, 227, 200;
   --quaternary-rgb: 85, 141, 243;
 
-
-  --primary-darker: red;
+  --primary-darker: #1b9ad4;
   --secondary-darker: #61c6d8;
   --tertiary-darker: #54ccb4;
   --quaternary-darker: #4c7dd6;
