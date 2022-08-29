@@ -33,9 +33,8 @@ export const Profile = () => {
 
                             <Card.Text class="m-0">
                                 {data.profile.emails?.map((item,index)=>
-                                    <a className="underline-link pe-2 border-right  " href={"mailto:"+item}>
-                                        {index>0?<>&nbsp;&nbsp;</>:<></>}
-                                        {item}</a>
+                                    <><a className="underline-link  " href={"mailto:"+item}>
+                                        {item}</a>&nbsp; | </>
                                 )}
 
                             </Card.Text>
@@ -59,9 +58,8 @@ export const Profile = () => {
                         </Card.Text>
 
 
-                        <Card.Text className="mb-1 d-flex">
-                            Icing liquorice oat cake caramels. Sugar plum gummi bears jujubes tootsie roll chocolate
-                            bar. Jujubes candy jelly-o topping.
+                        <Card.Text className="mb-1 d-flex text-muted">
+                            {data.profile?.description}
                         </Card.Text>
                     </Col>
 

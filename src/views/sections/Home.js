@@ -49,31 +49,31 @@ export const Home = () => {
                               {data.profile?.birthday? <div>Birthday: {new Date(data.profile?.birthday).toDateString()}</div>:<></>}
                           </Card.Body>
                       </Card>
-                  </Col>
-              </Row>
-              <div>Featured Articles/Posts/Blogs</div>
-              <Row className="g-2">
-                  <Col xs="4" className="mb-2">
-                      {/* List Start */}
-                      <Card className="border-primary hover-border-primary hover-scale-up">
-                          <NavLink to="/pages/blog/detail">
-                              <img src="/img/product/large/product-1.webp" className="card-img-top sh-20" alt="card image" />
-                          </NavLink>
-                          <Card.Body>
-                              <h4 className="m-">
-                                  <div className={"fs-1"}>
-                                      Basic Introduction to Bread Making
-                                  </div>
-                              </h4>
-                              <Clamp clamp="2" className="text-alternate mb-0">
-                                  Jujubes brownie marshmallow apple pie donut ice cream jelly-o jelly-o gummi bears. Tootsie roll chocolate bar dragée bonbon cheesecake icing.
-                                  Danish wafer donut cookie caramels gummies topping.
-                              </Clamp>
-                          </Card.Body>
-                      </Card>
-                      {/* List End */}
-                  </Col>
 
+                      <div>Featured Articles/Posts/Blogs</div>
+                      <Row className="g-2">
+                          {data?.posts?.map(item=>
+                              <Col xs={6} md={4} className="mb-2">
+                                  {/* List Start */}
+                                  <a href={item.link} target="_blank">
+                                      <Card className="border-primary hover-border-primary hover-scale-up">
+                                          <Card.Body className={"p-3"}>
+                                              <h4 className="m-">
+                                                  <div className={"fs-1"}>
+                                                      {item.name}
+                                                  </div>
+                                              </h4>
+                                              <Clamp clamp="2" className="text-dark mb-0">
+                                                  {item.description}
+                                              </Clamp>
+                                              <Card.Text class={"text-muted"}>{item.writer}</Card.Text>
+                                          </Card.Body>
+                                      </Card>
+                                  </a>
+                                  {/* List End */}
+                              </Col>)}
+                      </Row>
+                  </Col>
               </Row>
           </section>
       </Tab.Pane>

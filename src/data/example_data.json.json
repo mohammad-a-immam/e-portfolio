@@ -10,7 +10,7 @@
     ],
     "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "other_contact": null,
-    "resume": "https://hello.com",
+    "resume": "https://resume.com",
     "city": "Gainesville, FL",
     "birthday": "07-08-1998",
     "links": [
@@ -28,25 +28,10 @@
   },
   "features": [
     {
-      "name": "University of Florida",
+      "name": "Feature 1",
       "description": "Class of 2021 (Cum Laude)",
-      "image": "http://floridagators.com/images/logos/site/site.png",
-      "logo": "",
+      "image": "https://picsum.photos/200",
       "link": "https://www.ufl.edu"
-    },
-    {
-      "name": "AWS Solutions Architect",
-      "description": "Associate",
-      "image": "https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Associate_badge.3419559c682629072f1eb968d59dea0741772c0f.png",
-      "logo": "",
-      "link": "https://www.credly.com/badges/a6c64bb2-825c-477b-97ec-97ab40aa3aa7/facebook?fbclid=IwAR1Njp-l2Ms0s1WDs_vPtyK5M05w31lEFPFVxHkAu2jeVeLu0jUqM_K2QLA"
-    },
-    {
-      "name": "Microsoft Technology Associate ",
-      "description": "Software Development Fundamentals",
-      "image": "https://images.credly.com/size/680x680/images/7e0d2e0d-e68a-4a87-9245-dc288c97f33b/image.png",
-      "logo": "",
-      "link": "https://www.credly.com/badges/6e31915d-26a5-4f8e-a953-b48b621d0530/public_url"
     }
   ],
   "education": [
@@ -130,16 +115,12 @@
   "posts": [
     {
       "name": "First Post",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       "link": "https://www.link.com",
       "writer": "Najim Bhai",
-      "type": "articles"
-    },
-    {
-      "name": "Second Post",
-      "link": "https://www.link.com",
-      "writer": "Mohammad Immam",
-      "type": "articles"
+      "type": "article"
     }
+
   ],
   "comments": [
     {
