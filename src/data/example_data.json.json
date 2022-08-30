@@ -36,82 +36,107 @@
   ],
   "education": [
     {
-      "institution": "Introduction to React 2025",
-      "description": "<b>Moon Tempor</b>\n\nAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.",
-      "title": "e",
-      "title_details": "Computer and Information Science | Herbert Werthiem College of Engineering",
-      "location": "Gainesville, FL",
-      "from": "10-01-2020",
-      "to": "20-12-22",
-      "attachment": "xyz.pdf",
-      "website": "https://www.ufl.edu",
-      "link": null,
-      "highlights": [
-        "research",
-        "side_projects"
-      ],
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/University_of_Florida_seal.svg/1200px-University_of_Florida_seal.svg.png",
-      "color": "quaternary",
-      "attachments": [
-        {
-          "name": "Diploma",
-          "link": "https://www.facebook.com"
-        },
-        {
-          "name": "Diploma 2",
-          "link": "https://www.facebook.com"
-        }
-      ]
-    },
-    {
-      "institution": "Introduction to React 2025",
-      "description": "<b>Moon Tempor</b>\n\nAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.",
-      "title": "e",
-      "title_details": "Computer and Information Science | Herbert Werthiem College of Engineering",
-      "location": "Gainesville, FL",
-      "from": "10-01-2020",
-      "to": "20-12-22",
-      "attachment": "xyz.pdf",
-      "website": "https://www.ufl.edu",
-      "link": null,
-      "highlights": [
-        "research",
-        "side_projects"
-      ],
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/University_of_Florida_seal.svg/1200px-University_of_Florida_seal.svg.png",
-      "color": "quaternary",
-      "attachments": [
-        {
-          "name": "Diploma",
-          "link": "https://www.facebook.com"
-        },
-        {
-          "name": "Diploma 2",
-          "link": "https://www.facebook.com"
-        }
-      ]
-    }
-  ],
-  "experience": [
-    {
-      "institution": "Gainesville Regional Utilities",
-      "description": "Some desc here",
+      "name": "University of Challenger",
       "title": "Software Engineer",
-      "title_details": "Systems Control",
+      "subtitle": "Software Engineer",
       "location": "Gainesville, FL",
       "from": "10-01-2019",
       "to": "present",
-      "attachment": "xyz.pdf",
-      "website": "https://www.ufl.edu",
-      "link": null,
-      "highlights": [
-        "research",
-        "side_projects"
+      "attachments": [
+        {
+          "name": "Diploma",
+          "link": "https://www.facebook.com"
+        },
+        {
+          "name": "Diploma 2",
+          "link": "https://www.facebook.com"
+        }
       ],
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/University_of_Florida_seal.svg/1200px-University_of_Florida_seal.svg.png",
-      "color": "secondary"
+      "link": null,
+      "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/University_of_Florida_seal.svg/1200px-University_of_Florida_seal.svg.png"
     }
   ],
+  "experience": {
+    "jobs": [
+      {
+        "name": "Gainesville Regional Utilities",
+        "description": "Some desc here",
+        "title": "Software Engineer",
+        "location": "Gainesville, FL",
+        "from": "10-01-2019",
+        "to": "present",
+        "attachments": [
+          {
+            "name": "Diploma",
+            "link": "https://www.facebook.com"
+          },
+          {
+            "name": "Diploma 2",
+            "link": "https://www.facebook.com"
+          }
+        ],
+        "link": null,
+        "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/University_of_Florida_seal.svg/1200px-University_of_Florida_seal.svg.png"
+      }
+    ],
+    "snippets": [
+      {
+        "name": "Gainesville Regional Utilities",
+        "description": "desc about this snipet",
+        "link": null,
+        "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/University_of_Florida_seal.svg/1200px-University_of_Florida_seal.svg.png"
+      }
+    ]
+  },
+  "expertise": {
+    "certification": [
+      {
+        "name": "Certificate1",
+        "link": "https://www.certificate.com",
+        "picture": "https://picsum.photos/400",
+        "date": "2022"
+      }
+    ],
+    "majorSkillset": [
+      {
+        "name": "C#",
+        "picture": "https://picsum.photos/400"
+      }
+    ],
+    "database": [
+      {
+        "name": "C#",
+        "picture": "https://picsum.photos/400"
+      }
+    ],
+    "apis": [
+      {
+        "name": "C#",
+        "picture": "https://picsum.photos/400",
+        "description": "I did this wih the api"
+      }
+    ],
+    "cloud": [
+      {
+        "name": "Google Cloud Platform",
+        "picture": "https://picsum.photos/400",
+        "description": "I did this, this and that"
+      }
+    ],
+    "framework": [
+      {
+        "name": "C#",
+        "picture": "https://picsum.photos/400"
+      }
+    ],
+    "others": [
+      {
+        "name": "C#",
+        "picture": "https://picsum.photos/400",
+        "description": "I did this wih the api"
+      }
+    ]
+  },
   "posts": [
     {
       "name": "First Post",
@@ -120,24 +145,53 @@
       "writer": "Najim Bhai",
       "type": "article"
     }
-
+  ],
+  "projects": [
+    {
+      "id": 20,
+      "name": "Hello project",
+      "description": "Some nice description of the project. Clicking here will take you to the page",
+      "details": "hello",
+      "images": ["https://picsum.photos/200","https://picsum.photos/200"],
+      "highlights": [
+        {"name": ".NET"}
+      ],
+      "completed": true,
+      "repository": "private",
+      "hosting": "azure web apps",
+      "demo": "http://www.demo.com"
+    },
+    {
+      "id": 22,
+      "name": "Hello project",
+      "description": "Some nice description of the project. Clicking here will take you to the page",
+      "details": "hello",
+      "images": ["https://picsum.photos/200","https://picsum.photos/200"],
+      "highlights": [
+        {"name": ".NET"}
+      ],
+      "completed": false,
+      "repository": "private",
+      "hosting": "azure web apps",
+      "demo": "http://www.demo.com"
+    }
   ],
   "comments": [
     {
-      "name": "Sanjana Meherun",
-      "picture": "https://scontent.fmia1-1.fna.fbcdn.net/v/t39.30808-6/293794332_4810531502386880_4820581587773160156_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=yslxz75z5FYAX-RFsUZ&_nc_ht=scontent.fmia1-1.fna&oh=00_AT9MfKRGgRRWSauubdarOCUl5BRtiuIQG7sTxRNyP04o7A&oe=630D29B5",
+      "name": "Dummy person",
+      "picture": "https://picsum.photos/200",
       "comment": "I am proud of your hard work",
       "featured": false,
-      "link": "https://www.facebook.com/photo/?fbid=4810531505720213&set=a.108468849259859",
+      "link": "dummy person",
       "relationship": "Ex-Manager",
       "createdAt": "2020-20-22"
     },
     {
-      "name": "Sanjana Meherun",
-      "picture": "https://scontent.fmia1-1.fna.fbcdn.net/v/t39.30808-6/293794332_4810531502386880_4820581587773160156_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=yslxz75z5FYAX-RFsUZ&_nc_ht=scontent.fmia1-1.fna&oh=00_AT9MfKRGgRRWSauubdarOCUl5BRtiuIQG7sTxRNyP04o7A&oe=630D29B5",
+      "name": "Dummy Person",
+      "picture": "https://picsum.photos/200",
       "comment": "I am proud of you",
       "featured": true,
-      "link": "https://www.facebook.com/photo/?fbid=4810531505720213&set=a.108468849259859",
+      "link": "https://www.facebook.com",
       "relationship": "Ex-Manager",
       "createdAt": "2020-20-22"
     }

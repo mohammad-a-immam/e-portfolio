@@ -1,20 +1,28 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Badge, Button, Card, Col, Row} from "react-bootstrap";
 import CarouselGallery from "../components/carousel/CarouselGallery";
+import {DataContext} from "../data/DataProvider";
+import {useParams} from "react-router-dom";
 
 export const Project = () => {
+    const params = useParams();
+    const data = useContext(DataContext);
+    const item = data?.projects.find(x=>x.id == params.id);
+
+    if(!item)
+        return (<div>Error!</div>);
+
     return (
         <section className="scroll-section" id="gallery">
             <div className="mt-0">
                 <a href="/" className={"btn btn-link"}>Home</a>
-                <a href="/projects" className={"btn btn-link"}>Projects</a>
+                <a href="/experience" className={"btn btn-link"}>Projects</a>
             </div>
             <Row>
                 <Col xs={12} md={8} className="m-auto mt-0">
-                    <h3 className="small-title mb-0">Project Name</h3>
+                    <h3 className="small-title mb-0">{item?.name}</h3>
                     <div class={"text-muted fs-1 mb-2"}>
-                        Designed and Developped Gaiensville Regional Utilities' primary
-                        crew availability management solution
+                        {item.description}
                     </div>
                     <CarouselGallery/>
                 </Col>
@@ -22,18 +30,19 @@ export const Project = () => {
                     <Card>
                         <Card.Body>
                             <Card.Text>
-                                Experience:
+                                Details: {item.details}
                             </Card.Text>
-                            Tech Stack Informaion:
+                            Project Highlights:
                             <Badge bg="success">.NET</Badge> <br/>
                             Hosting: <br/>
                             Repository: Private Repository
                             <hr/>
-                            <Row>
-                                <Col>
-                                    <Button className="btn-sm">Demo</Button>
-                                </Col>
-                            </Row>
+                            {item.demo?
+                                <Row>
+                                    <Col>
+                                        <a target="_blank" href={item.demo} className="btn btn-primary btn-sm">Demo</a>
+                                    </Col>
+                                </Row>:<></>}
                         </Card.Body>
                     </Card>
                 </Col>

@@ -44,7 +44,7 @@ export const Home = () => {
 
                       <Card className="mb-5 hover-scale-up">
                           <Card.Body>
-                              <div>Current Employer: {data.experience?.find(x=>x.to == "present")?.institution}</div>
+                              <div>Current Employer: {data.experience.jobs?.find(x=>x.to == "present")?.name}</div>
                               <div>Current City: {data.profile?.city}</div>
                               {data.profile?.birthday? <div>Birthday: {new Date(data.profile?.birthday).toDateString()}</div>:<></>}
                           </Card.Body>

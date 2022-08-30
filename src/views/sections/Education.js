@@ -34,11 +34,11 @@ export const Education = () => {
                                    <Card.Title className={"p-2"}>
                                        <Row>
                                            <Col xs={3} md={2}>
-                                               {item.logo ?
-                                                   <img src={item.logo} width={35} height={35} className="me-2"/> : <></>}
+                                               {item.picture ?
+                                                   <img src={item.picture} width={35} height={35} className="me-2"/> : <></>}
                                            </Col>
                                            <Col className="align-self-center p-0">
-                                               <h6 className="fw-bold fs-1">{item.institution} - {item.title ?? +"-"}</h6>
+                                               <h6 className="fw-bold fs-1">{item.name} - {item.title ?? +"-"}</h6>
                                            </Col>
 
                                            <Col xs={12} md={4} className="p-2 text-align-right d-none d-md-inline">
