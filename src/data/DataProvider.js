@@ -6,7 +6,6 @@ import axios from "axios";
 export const DataContext = createContext();
 export const DataProvider = (props) => {
     //data from cosmosdb
-    const [profile, setProfile] = useState();
     const [data, setData] = useState();
 
 
@@ -15,7 +14,7 @@ export const DataProvider = (props) => {
         const cosmosDbHelper_URI = process.env.REACT_APP_COSMOSDB_AZUREFUNCTIONURI;
         const databaseId = process.env.REACT_APP_COSMOSDB_DATABASEID;
         const containerId = process.env.REACT_APP_COSMOSDB_CONTAINERID;
-        if(cosmosDbHelper_URI && cosmosDbHelper_URI != "your_cosmosdb_azurefunction_uri"){
+        if(cosmosDbHelper_URI && cosmosDbHelper_URI !== "your_cosmosdb_azurefunction_uri"){
             const cosmosConfig = {databaseId, containerId};
 
             //get each data separately from cosmos db using the helper function hosted on azure
@@ -27,11 +26,6 @@ export const DataProvider = (props) => {
 
             function getExperience (){
                 cosmosConfig.itemId = "experience";
-                return axios.post(cosmosDbHelper_URI,cosmosConfig);
-            }
-
-            function getFeatures (){
-                cosmosConfig.itemId = "features";
                 return axios.post(cosmosDbHelper_URI,cosmosConfig);
             }
 
@@ -80,7 +74,6 @@ export const DataProvider = (props) => {
             //no cosmos db uri to connect to! get local json data!
             const defaultData = require("./example_data.json");
             setData(defaultData);
-            setProfile(defaultData.profile);
         }
     }, []);
 

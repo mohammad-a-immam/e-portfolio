@@ -1,12 +1,9 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React from 'react';
 
 // import layout
-import Layout from 'layout/Layout';
 
 import Main from "./views/Main";
 import {Col, Container, Row} from "react-bootstrap";
-import Nav from "./layout/nav/Nav";
-import Footer from "./layout/footer/Footer";
 import useLayout from "./hooks/useLayout";
 import Switch from "react-router-dom/es/Switch";
 import Route from "react-router-dom/es/Route";

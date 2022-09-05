@@ -6,6 +6,7 @@ import { Card, Figure, Modal } from 'react-bootstrap';
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import { LAYOUT, MENU_BEHAVIOUR, MENU_PLACEMENT, NAV_COLOR, RADIUS, THEME_COLOR } from 'constants.js';
 import { settingsChangeColor, settingsChangeLayout, settingsChangeNavColor, settingsChangeRadius } from 'settings/settingsSlice';
+import {menuChangeBehaviour, menuChangePlacement} from "../nav/main-menu/menuSlice";
 
 const OptionGroup = ({ label = '', children, noContainer = false }) => (
   <div className="mb-5">

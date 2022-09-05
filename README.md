@@ -22,6 +22,9 @@ https://mohammad-a-immam.azurewebsites.net
 - Make sure you have nodejs v.14 installed
 - use `npm start` to start the react project
 
-## Hostings
-Azure App Service
+## Hostings and deployment
+- Azure App Service
+- CI/CD pipeline integrated through Azure App Service
+
+
 
