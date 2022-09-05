@@ -24,7 +24,8 @@ export const Project = () => {
                     <div class={"text-muted fs-1 mb-2"}>
                         {item.description}
                     </div>
-                    <CarouselGallery/>
+                    <CarouselGallery
+                        galleryItems={item.images}/>
                 </Col>
                 <Col xs={12} md={8} className="m-auto">
                     <Card>

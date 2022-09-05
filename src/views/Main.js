@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Row, Col, Card, Nav, Tab, Dropdown} from 'react-bootstrap';
 import HtmlHead from 'components/html-head/HtmlHead';
 import BreadcrumbList from 'components/breadcrumb-list/BreadcrumbList';
@@ -9,9 +9,11 @@ import classNames from "classnames";
 import {useWindowSize} from "../hooks/useWindowSize";
 import CsLineIcons from "../cs-line-icons/CsLineIcons";
 import {SectionNav} from "./SectionsNav";
+import {DataContext} from "../data/DataProvider";
 
 const VerticalPage = () => {
-    const title = 'Mohammad A Immam';
+    const data = useContext(DataContext);
+    const title = data?.profile?.name;
     const description = 'An empty page with a fluid vertical layout.';
     const activeSection = useLocation().hash;
 

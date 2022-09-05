@@ -42,7 +42,7 @@ export const Expertise = () => {
                             {data?.expertise?.certification?.map(item =>
 
                                 <Col xs={6} md={3} className=" hover-scale-up">
-                                    <a href={item.link}>
+                                    <a href={item.link} target={"_blank"}>
                                         <Card className="shadow border-primary hover-border-primary">
                                             <img width={60} className="m-auto mt-1"
                                                  src={item.picture}/>

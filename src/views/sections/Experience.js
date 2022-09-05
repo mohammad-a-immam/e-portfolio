@@ -31,7 +31,7 @@ export const Experience = () => {
                             <div className="mb-1 title-2">Featured Projects</div>
                             <Row>
                                 {
-                                    data?.projects.filter(x=>x.completed).map(item=>
+                                    data?.projects?.past?.map(item=>
                                         <Col md={4} className="h-auto">
 
                                             <a href={`/projects/${item.id}`}>
@@ -58,7 +58,7 @@ export const Experience = () => {
                             <div className="mb-1 title-2">Future Plans</div>
                             <Row style={{height: "40vh"}}>
                                 {
-                                    data?.projects.filter(x=>!x.completed).map(item=>
+                                    data?.projects?.future?.map(item=>
                                         <Col md={4} className="h-auto">
 
                                             <a href={`/projects/${item.id}`}>
@@ -135,7 +135,7 @@ export const Experience = () => {
                         <Row className="    ">
                             <div>Snippets</div>
                             {data?.experience?.snippets?.map(item=>
-                                <a href={item.link} className="text-dark">
+                                <a href={item.link} className="text-dark" target="_blank">
                                     <Card className="mb-2 border-primary hover-border-primary hover-scale-up">
 
                                         <Row className="g-0 sh-9 p-card pt-0 pb-0">

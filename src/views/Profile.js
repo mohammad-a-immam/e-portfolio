@@ -33,7 +33,7 @@ export const Profile = () => {
 
                             <Card.Text class="m-0">
                                 {data.profile.emails?.map((item,index)=>
-                                    <><a className="underline-link  " href={"mailto:"+item}>
+                                    <><a  className="underline-link  " href={"mailto:"+item}>
                                         {item}</a>&nbsp; | </>
                                 )}
 

@@ -11,13 +11,13 @@ export const Guestwall = () => {
     const [gitUser, setGitUser] = useState();
     const location = useLocation();
 
-    const client_id = process.env.REACT_APP_CLIENT_ID;
-    const client_secret = process.env.REACT_APP_CLIENT_SECRET;
+    const client_id = process.env.REACT_APP_GITHUB_CLIENTID;
+    const gitTokenHelper_URI = process.env.REACT_APP_GITHUB_TOKENHELPER_AZUREFUNCTIONURI;
 
     useEffect(() => {
         const code = location?.search ? querystring.parse(location.search.replace('?', ''))?.code : null;
         if (code != null) {
-            axios.get(`https://mfunctions-node-01.azurewebsites.net/api/GitAccessToken?code=${process.env.REACT_APP_AZURE_CODE}&gitcode=${code}`).then((res) => {
+            axios.get(`${gitTokenHelper_URI}&gitcode=${code}`).then((res) => {
                 const access_token = res.data?.access_token;
                 if (access_token != null) {
                     axios.get('https://api.github.com/user', {
@@ -34,12 +34,6 @@ export const Guestwall = () => {
     }, [])
 
 
-    function RequestUser() {
-        let url = 'https://github.com/login/oauth/authorize';
-        url += `?client_id=${client_id}`
-        window.location.replace(url);
-    }
-
 
     return (
         <Tab.Pane eventKey="guestwall">
@@ -47,6 +41,8 @@ export const Guestwall = () => {
                 <Row className="mb-3">
                     <Col xs={6} md={6} className="m-auto text-align-center">
                         {
+                            !client_id || client_id=="your_github_oauth_clientid"?
+                            <></>:
                             gitUser ?
                                 <Row>
                                     <Col xs={2}>
@@ -65,10 +61,11 @@ export const Guestwall = () => {
                                     </Col>
                                 </Row>
                                 :
-                                <Button variant="dark" className="btn-icon btn-icon-start mb-1" onClick={RequestUser}>
+                                <a className="btn btn-dark btn-icon btn-icon-start mb-1"
+                                   href={`https://github.com/login/oauth/authorize?client_id=${client_id}`}>
                                     <i className={"me-3 icon-20 bi bi-github text-light"}/>
                                     <span>Login to Comment</span>
-                                </Button>
+                                </a>
                         }
                     </Col>
                 </Row>
@@ -79,7 +76,7 @@ export const Guestwall = () => {
                             think of me
                         </div>
 
-                        {data.comments?.filter(x => x.featured).map(item =>
+                        {data.comments?.items?.filter(x => x.featured).map(item =>
                             <div className="mb-2 card-content">
                                 <Row className="g-2">
 
@@ -111,7 +108,7 @@ export const Guestwall = () => {
                             leave a portion of you with me...
                         </div>
 
-                        {data.comments?.filter(x => !x.featured).map(item =>
+                        {data.comments?.items?.filter(x => !x.featured).map(item =>
                             <div className="mb-2 card-content">
                                 <Row className="g-2">
                                     <Col className="d-flex content-container">

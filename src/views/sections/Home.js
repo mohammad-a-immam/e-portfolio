@@ -14,7 +14,7 @@ export const Home = () => {
               <Row>
                   <Col xs={12} md={4} className="order-md-2 mt-4 mt-md-0">
                       <Card.Title>Features</Card.Title>
-                      {data.features?.map((item)=>
+                      {data.profile?.features?.map((item)=>
                           <Card className="mb-2 border-primary text-white hover-border-primary hover-scale-up">
                               <a href={item.link} target="_blank" className="text-dark">
                                   <Row className="g-0 sh-9 p-card pt-0 pb-0">
@@ -52,7 +52,7 @@ export const Home = () => {
 
                       <div>Featured Articles/Posts/Blogs</div>
                       <Row className="g-2">
-                          {data?.posts?.map(item=>
+                          {data?.posts?.items?.map(item=>
                               <Col xs={6} md={4} className="mb-2">
                                   {/* List Start */}
                                   <a href={item.link} target="_blank">
@@ -61,6 +61,7 @@ export const Home = () => {
                                               <h4 className="m-">
                                                   <div className={"fs-1"}>
                                                       {item.name}
+                                                      <div className={"text-muted"}>Type: {item.type}</div>
                                                   </div>
                                               </h4>
                                               <Clamp clamp="2" className="text-dark mb-0">

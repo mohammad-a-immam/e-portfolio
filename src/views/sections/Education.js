@@ -28,7 +28,7 @@ export const Education = () => {
                 <Accordion className="mb-n2" defaultActiveKey="0">
                     <Row>
                     {
-                        data.education?.map((item, index) =>
+                        data.education?.institutions?.map((item) =>
                            <Col md={6}>
                                <Card className={"d-flex mb-2 flex-grow-1 border-primary hover-scale-up"}>
                                    <Card.Title className={"p-2"}>
