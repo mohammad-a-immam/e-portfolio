@@ -24,7 +24,7 @@ https://mohammad-a-immam.azurewebsites.net
 
 ## Hostings and deployment
 - Azure App Service
-- CI/CD pipeline integrated through Azure App Service
+- CI/CD pipeline integrated through GitHub Actions. (edited default workflow to execute npm install and build on target machine)
 
 
 
