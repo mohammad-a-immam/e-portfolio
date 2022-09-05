@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'mohammad-a-immam'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_54B09AD73BE041E5942A4B1CB5E22ADA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4945D907984B48AD81F5CE47FD20C429 }}
           package: .
