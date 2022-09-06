@@ -7,7 +7,10 @@ import {useParams} from "react-router-dom";
 export const Project = () => {
     const params = useParams();
     const data = useContext(DataContext);
-    const item = data?.projects.find(x=>x.id == params.id);
+    let item = data?.projects.past.find(x=>x.id == params.id);
+    if(item == null){
+        item = data?.projects.future.find(x=>x.id == params.id);
+    }
 
     if(!item)
         return (<div>Error!</div>);
@@ -34,7 +37,12 @@ export const Project = () => {
                                 Details: {item.details}
                             </Card.Text>
                             Project Highlights:
-                            <Badge bg="success">.NET</Badge> <br/>
+                            {
+                                item.highlights?.map(hItem=>
+                                    <Badge className="me-1" bg="tertiary">{hItem.name}</Badge>
+                                )
+                            }
+                             <br/>
                             Hosting: <br/>
                             Repository: Private Repository
                             <hr/>

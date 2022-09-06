@@ -10,6 +10,8 @@ export const Guestwall = () => {
     const data = useContext(DataContext);
     const [gitUser, setGitUser] = useState();
     const location = useLocation();
+    const [newComment, setNewComment] = useState();
+    const [loading, setLoading] = useState("SUBMIT");
 
     const client_id = process.env.REACT_APP_GITHUB_CLIENTID;
     const gitTokenHelper_URI = process.env.REACT_APP_GITHUB_TOKENHELPER_AZUREFUNCTIONURI;
@@ -33,6 +35,30 @@ export const Guestwall = () => {
         }
     }, [])
 
+    function SubmitComment(){
+        if(!newComment || !gitUser)
+            return;
+        const item = {
+            id: gitUser.id.toString(),
+            name: gitUser.name,
+            picture: gitUser.avatar_url,
+            comment: newComment,
+            featured: false,
+            link: gitUser.html_url,
+            relationship: "TBD",
+            createdAt: new Date(),
+        }
+
+        const cosmosDbWriter_URI = process.env.REACT_APP_COSMOSDB_COMMENTS_AZUREFUNCTIONURI;
+        const databaseId = process.env.REACT_APP_COSMOSDB_DATABASEID;
+        const containerId = process.env.REACT_APP_COSMOSDB_COMMENT_CONTAINERID;
+        const cosmosConfig = {databaseId, containerId, item}
+
+        setLoading("loading...")
+        axios.post(cosmosDbWriter_URI,cosmosConfig).then(res=>{
+            window.location.reload();
+        }).catch(e=>setLoading("error.."));
+    }
 
 
     return (
@@ -54,10 +80,10 @@ export const Guestwall = () => {
                                     </Col>
                                     <Col>
                                         <textarea className="form-control"
-                                                  placeholder="write something relevant about Mohammad Immam..."/>
+                                                  placeholder="write something relevant about Mohammad Immam..." value={newComment} onChange={(e)=>setNewComment(e.target.value)}/>
                                     </Col>
                                     <Col xs={2}>
-                                        <input type={"button"} className="btn btn-sm btn-primary" value="Submit"/>
+                                        <input type={"button"} className="btn btn-sm btn-primary" value={loading} onClick={SubmitComment}/>
                                     </Col>
                                 </Row>
                                 :
@@ -76,7 +102,7 @@ export const Guestwall = () => {
                             think of me
                         </div>
 
-                        {data.comments?.items?.filter(x => x.featured).map(item =>
+                        {data.comments?.filter(x => x.featured).sort((x,y)=>y.createdAt - x.createdAt).map(item =>
                             <div className="mb-2 card-content">
                                 <Row className="g-2">
 
@@ -108,7 +134,7 @@ export const Guestwall = () => {
                             leave a portion of you with me...
                         </div>
 
-                        {data.comments?.items?.filter(x => !x.featured).map(item =>
+                        {data.comments?.filter(x => !x.featured).sort((x,y)=>y.createdAt - x.createdAt).map(item =>
                             <div className="mb-2 card-content">
                                 <Row className="g-2">
                                     <Col className="d-flex content-container">

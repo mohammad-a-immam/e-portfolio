@@ -50,14 +50,14 @@ export const DataProvider = (props) => {
             }
 
             function getComments(){
-                cosmosConfig.itemId = "comments";
+                cosmosConfig.containerId = process.env.REACT_APP_COSMOSDB_COMMENT_CONTAINERID;
+                cosmosConfig.itemId = null;
                 return axios.post(cosmosDbHelper_URI,cosmosConfig);
             }
 
             Promise.all([getProfile(),getExperience(),
                 getEducation(), getExpertise(), getPosts(), getProjects(), getComments()])
                 .then((responses)=>{
-                console.log(responses);
                 const _data = {
                     profile:responses[0].data,
                     experience:responses[1].data,

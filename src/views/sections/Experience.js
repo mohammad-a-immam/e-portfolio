@@ -36,14 +36,14 @@ export const Experience = () => {
 
                                             <a href={`/projects/${item.id}`}>
                                             <Card className="h-100 hover-scale-up hover-border-primary cursor-pointer">
-                                                <Card.Img src="/img/product/small/product-1.webp" className="card-img-top sh-20"
+                                                <Card.Img src={item.images[0]} className="card-img-top sh-20"
                                                           alt="card image"/>
                                                 <Card.Body className={"p-1"}>
                                                     <div className="fw-bold">{item.name}</div>
                                                     <div className="fw-light fs-0 text-dark">{item.description}
                                                     </div>
                                                     {item.highlights?.map(hItem=>
-                                                        <Badge className="m-1" bg={"primary"}>{hItem.name}</Badge>)}
+                                                        <Badge className="m-1" bg={"tertiary"}>{hItem.name}</Badge>)}
                                                 </Card.Body>
                                             </Card>
 
@@ -63,14 +63,14 @@ export const Experience = () => {
 
                                             <a href={`/projects/${item.id}`}>
                                                 <Card className="h-100 hover-scale-up hover-border-primary cursor-pointer">
-                                                    <Card.Img src="/img/product/small/product-1.webp" className="card-img-top sh-20"
+                                                    <Card.Img src={item.images[0]} className="card-img-top sh-20"
                                                               alt="card image"/>
                                                     <Card.Body className={"p-1"}>
                                                         <div className="fw-bold">{item.name}</div>
                                                         <div className="fw-light fs-0 text-dark">{item.description}
                                                         </div>
                                                         {item.highlights?.map(hItem=>
-                                                            <Badge className="m-1" bg={"primary"}>{hItem.name}</Badge>)}
+                                                            <Badge className="m-1" bg={"tertiary"}>{hItem.name}</Badge>)}
                                                     </Card.Body>
                                                 </Card>
 
